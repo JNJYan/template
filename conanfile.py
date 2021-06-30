@@ -28,7 +28,7 @@ class TestConan(ConanFile):
     exports_sources = "*"
 
     def requirements(self):
-        self.requires("gtest/1.8.1")
+        self.requires("gtest/1.10.0")
 
     def _configure_cmake(self):
         print("testing is false")
