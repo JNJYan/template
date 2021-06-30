@@ -1,10 +1,10 @@
 '''
 Author: your name
 Date: 2021-04-29 10:10:09
-LastEditTime: 2021-04-29 14:45:14
-LastEditors: Please set LastEditors
+LastEditTime: 2021-06-30 14:40:53
+LastEditors: JNJYan
 Description: In User Settings Edit
-FilePath: /conan-learn/conanfile.py
+FilePath: /template/conanfile.py
 '''
 from conans import ConanFile, CMake, tools
 import os
@@ -29,6 +29,7 @@ class TestConan(ConanFile):
 
     def requirements(self):
         self.requires("gtest/1.10.0")
+        self.requires("yaml-cpp/0.6.3")
 
     def _configure_cmake(self):
         print("testing is false")
