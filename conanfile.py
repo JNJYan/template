@@ -1,11 +1,12 @@
 '''
-Author: your name
-Date: 2021-04-29 10:10:09
-LastEditTime: 2021-07-01 00:05:18
+Author: JNJYan
+Date: 2021-06-30 09:34:49
 LastEditors: JNJYan
-Description: In User Settings Edit
+LastEditTime: 2021-07-01 18:01:23
+Description: file content
 FilePath: /template/conanfile.py
 '''
+
 from conans import ConanFile, CMake, tools
 import os
 
@@ -26,16 +27,15 @@ class TestConan(ConanFile):
     default_options = "shared=False", "testing=True"
     generators = "cmake"
     exports_sources = "*"
-
     def requirements(self):
         self.requires("gtest/1.10.0")
         self.requires("yaml-cpp/0.6.3")
         self.requires("benchmark/1.5.3")
         self.requires("rapidjson/1.1.0")
         self.requires("glog/0.5.0")
+        self.requires("protobuf/3.17.1")
 
     def _configure_cmake(self):
-        print("testing is false")
         cmake = CMake(self)
         if self.options.testing:
             print("testing is true")
