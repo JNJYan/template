@@ -1,14 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-04-29 16:11:01
- * @LastEditTime: 2021-04-29 16:48:40
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-07-01 21:01:33
+ * @LastEditors: JNJYan
  * @Description: In User Settings Edit
- * @FilePath: /conan-learn/tests/tools_test.cpp
+ * @FilePath: /template/tests/tools_test.cpp
  */
 #include <gtest/gtest.h>
+#include <yaml-cpp/yaml.h>
 
-#include "tools.h"
 #include <iostream>
 
 TEST(tools_test, tool) {

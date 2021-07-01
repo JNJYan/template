@@ -1,0 +1,4 @@
+Graph:
+    Edge:
+    - name: Node_A
+    - name: Node_B
