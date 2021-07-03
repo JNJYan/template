@@ -1,0 +1,9 @@
+syntax="proto3";
+package jnjyan.pb3.test;
+
+message UserInfo {
+    string name = 1;
+    int32 age = 2;
+    int32 gender = 3;
+    string birthday = 4;
+};
