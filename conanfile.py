@@ -24,15 +24,15 @@ class TestConan(ConanFile):
     settings = "cppstd", "os", "compiler", "build_type", "arch"
     default_settings = "cppstd=17"
     options = {"shared": [True, False], "testing": [True, False]}
-    default_options = "shared=False", "testing=True"
+    default_options = "shared=False", "testing=False"
     generators = "cmake"
     exports_sources = "*"
     def requirements(self):
         self.requires("gtest/1.10.0")
-        self.requires("yaml-cpp/0.6.3")
-        self.requires("benchmark/1.5.3")
-        self.requires("rapidjson/1.1.0")
-        self.requires("glog/0.5.0")
+        # self.requires("yaml-cpp/0.6.3")
+        # self.requires("benchmark/1.5.3")
+        # self.requires("rapidjson/1.1.0")
+        # self.requires("glog/0.5.0")
         self.requires("protobuf/3.17.1")
 
     def _configure_cmake(self):

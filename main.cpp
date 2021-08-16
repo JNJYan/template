@@ -6,9 +6,14 @@
  * @Description: file content
  * @FilePath: /template/main.cpp
  */
-#include <bits/stdc++.h>
+#include <iostream>
+#include "proto/test.pb.h"
+#include "google/protobuf/arena.h"
+
 
 int main() {
-        
+    google::protobuf::Arena arena;
+    auto user_info = google::protobuf::Arena::CreateMessage<jnjyan::pb3::test::UserInfo>(&arena);
+    *user_info->mutable_name() = "JNJYan";
     return 0;
 }
