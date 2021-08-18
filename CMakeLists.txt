@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
 project(mytest)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # for vscode c_cpp_pre.json
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+set(CMAKE_CXX_FLAGS_RELEASE "ENV{CXXFLAGS} -O3 -Wall")
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # for vscode c_cpp_pre.json
-set(CMAKE_CXX_STANDARD 11)
+
 option(WITH_TESTING "build all tests" OFF)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)

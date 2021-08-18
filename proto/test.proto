@@ -1,8 +1,13 @@
 syntax="proto3";
 package jnjyan.pb3.test;
 
+message Name {
+    string cn_name = 1;
+    string en_name = 2;
+};
+
 message UserInfo {
-    string name = 1;
+    Name name = 1;
     int32 age = 2;
     int32 gender = 3;
     string birthday = 4;

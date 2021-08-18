@@ -22,7 +22,7 @@ class TestConan(ConanFile):
     version = "0.0.1"
     license = "MIT"
     settings = "cppstd", "os", "compiler", "build_type", "arch"
-    default_settings = "cppstd=17"
+    default_settings = "cppstd=17", "build_type=Debug"
     options = {"shared": [True, False], "testing": [True, False]}
     default_options = "shared=False", "testing=False"
     generators = "cmake"
